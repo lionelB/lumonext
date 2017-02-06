@@ -1,0 +1,80 @@
+{
+  "meta":{
+    "bio":"Je m’appelle Lionel Breduillieard et je suis développeur web indépendant.\nJe réalise des applications web, mobile ou les deux, en portant une attention particulière au design et à l’ergonomie.\nInstallé au sud de Valence (Drôme - France), j’interviens en télétravail partout en France (et pourquoi pas dans le monde).",
+    "title":"L'atelier du Lumographe",
+    "avatar":"medias/lionel.jpg",
+    "bubbles":[
+      "Échanger et apporter mon expertise pour faire de votre projet web, un outil simple, efficace et durable"
+    ],
+    "email":"lionel@lumographe.fr",
+    "mobile":"+33 6 83 74 37 74",
+    "socialLinks":[{
+        "name":"twitter",
+        "url":"https://twitter.com/b_lionel/",
+        "value":"@b_lionel"
+      }, {
+        "name":"linkedin",
+        "url":"https://fr.linkedin.com/in/lionelbreduillieard",
+        "value":"Lionel Breduillieard"
+      }, {
+        "name":"github",
+        "url":"https://github.com/lionelB",
+        "value":"lionelB"
+      }, {
+        "name":"google-plus",
+        "url":"https://github.com/lionelB",
+        "value":"+lionelbreduillieard"
+      }
+    ],
+    "projects":[{
+      "title": "Magency Training Plateform",
+      "description": "Au cours de cette mission, j’ai accompagné l’équipe de developpement front-end mettre en place un envirenoment de tests automatisé afin d’améliorer la qualité du code de leur application et limiter la dette technique. Un autre aspect de cette mission à consister à mentorer l’équipe afin de se rapprocher de l’état de l’art dans le domaine du développement d’application web (architecture orienté composant, smart/dumb component, …) et d’améliorer l’architecture général de l’application (separation of concern,  module, …)",
+      "slug": "magency",
+      "year": 2016,
+      "image": "static/img/magency/magency1.png",
+      "client": {
+        "logo": "static/img/magency/magency-logo.png",
+        "name": "Magency Digital"
+      }
+    }, {
+      "title": "Ticket Designer",
+      "description": "La société TombolaDirecte a fait appel à mes services pour travailler sur un nouveau module riche afin de permettre aux utilisateur de faire le design de leur ticket de tombola, tout en laissant libre cours à leur créativité. Entièrement basé sur un rendu SVG, l'utilisateur peut à loisir ajouter des formes, des images ou des textes, ou plus simplement personnaliser un des nombreux  modèles existant.",
+      "slug": "ticket-designer",
+      "year": 2015,
+      "image": "static/img/tomboladirecte/designer.jpg",
+      "client": {
+        "logo": "static/img/tomboladirecte/tomboladirecte-logo.png",
+        "name": "Tombola directe"
+      }
+    }],
+
+    "skills":[ {
+        "label":"Techniques",
+        "values":[
+          "HTML, CSS, Javascript",
+          "vanilla, AngularJs, reactJs, jQuery",
+          "BEM, Stylus, Less, Sass, Compass",
+          "npm scripts, Gulp, Grunt, Brunch",
+          "Git, github collaboration"
+        ]
+      },
+      {
+        "label":"Générales",
+        "values":[
+          "Ergonomie, expérience utilisateur",
+          "Design, interface",
+          "Bonnes pratiques, accessibilité",
+          "Performance"
+        ]
+      },
+      {
+        "label":"En cours",
+        "values":[
+          "ReactJs",
+          "Isomorphic App"
+        ]
+      }
+    ]
+  },
+  "html":"<p>Bonjour,\net bienvenue. Je m’appelle <strong>Lionel Breduillieard</strong> et je suis développeur web indépendant.</p>\n<p>Je réalise des applications web, mobile ou les deux, en portant une attention particulière au design et à l’ergonomie.</p>\n<p>Installé au sud de Valence (Drôme - France),<br>\n<strong>j’interviens en télétravail</strong> partout en France (et pourquoi pas dans le monde).</p>\n<hr>\n<p>Le Lumographe, c’est Lionel Breduillieard, passionné de conception web, d’ergonomie et de conception centrée sur l’utilisateur.</p>\n<p>J’ai commencé par travailler à l’université Lumière Lyon 2 où je me suis occupé de la création, la conception, la migration des portails institutionnels.<span class=\"large\"> De cette première expérience, j’ai acquis de solides compétences en développement front-end, accessibilité et respect des standards</span></p>\n<p>Par la suite, j’ai  participé à la conception et la réalisation d’applications web innovantes comme la gestion des podcasts<span class=\"large\"> de cours de l’université (de l’enregistrement à la diffusion)</span> ou un logiciel de tutorat en ligne spécialisé dans l’apprentissage des langues.</p>\n<p>En 2012, j’ai choisi de rejoindre une coopérative d’entrepreneurs, <a href=\"http://www.solstice.coop\">SOLSTICE</a>, afin de démarrer mon activité de développeur web indépendant.\n<span class=\"large\">C’est fort de ces expériences, que je mets maintenant à profit mes compétences pour</span> réaliser des applications web et mobile !</p>\n<p>N’hésitez pas à me contacter !</p>\n"
+}

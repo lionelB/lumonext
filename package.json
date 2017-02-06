@@ -1,0 +1,27 @@
+{
+  "name": "lumographe",
+  "version": "2.0.0",
+  "description": "lumographe website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "PORT=3000 SERVER=localhost  node server -p $PORT",
+    "build": "next build",
+    "start": "next start"
+  },
+  "author": "lionelb",
+  "license": "ISC",
+  "dependencies": {
+    "fontfaceobserver": "^2.0.7",
+    "isomorphic-fetch": "^2.2.1",
+    "next": "2.0.0-beta.22",
+    "normalize-svg-path": "^0.1.0",
+    "parse-svg-path": "^0.1.2",
+    "path-match": "^1.2.4",
+    "styletron-client": "^2.2.0",
+    "styletron-react": "^2.2.1",
+    "styletron-server": "^2.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^0.0.5"
+  }
+}

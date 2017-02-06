@@ -1,0 +1,5 @@
+.components_TopBorder_js-styles-TopBorder {
+  height: .3em ;
+  background: -webkit-linear-gradient(right, #35D3AF 3%, #00C3FF 98%);
+  background: linear-gradient(-90deg, #35D3AF 3%, #00C3FF 98%);
+}
