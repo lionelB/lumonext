@@ -1,6 +1,6 @@
 {
   "meta":{
-    "bio":"Je m’appelle Lionel Breduillieard et je suis développeur web indépendant.\nJe réalise des applications web, mobile ou les deux, en portant une attention particulière au design et à l’ergonomie.\nInstallé au sud de Valence (Drôme - France), j’interviens en télétravail partout en France (et pourquoi pas dans le monde).",
+    "bio":"Je m’appelle Lionel Breduillieard et je suis <strong>développeur front-end</strong> indépendant.\nJe réalise des applications web, mobile ou les deux, en portant une attention particulière au design et à l’ergonomie.\nInstallé au sud de Valence (Drôme - France), j’interviens en télétravail partout en France (et pourquoi pas dans le monde).",
     "title":"L'atelier du Lumographe",
     "avatar":"medias/lionel.jpg",
     "bubbles":[
@@ -9,9 +9,17 @@
     "email":"lionel@lumographe.fr",
     "mobile":"+33 6 83 74 37 74",
     "socialLinks":[{
+        "name":"email",
+        "url":"mailto:lionel@lumographe.fr",
+        "value":"lionel (at) lumographe.fr "
+      }, {
+        "name":"mobile",
+        "url":"https://fr.linkedin.com/in/lionelbreduillieard",
+        "value":"Lionel Breduillieard"
+      },{
         "name":"twitter",
-        "url":"https://twitter.com/b_lionel/",
-        "value":"@b_lionel"
+        "url":"https://twitter.com/lumographe",
+        "value":"@lumographe"
       }, {
         "name":"linkedin",
         "url":"https://fr.linkedin.com/in/lionelbreduillieard",
@@ -21,14 +29,14 @@
         "url":"https://github.com/lionelB",
         "value":"lionelB"
       }, {
-        "name":"google-plus",
-        "url":"https://github.com/lionelB",
-        "value":"+lionelbreduillieard"
+        "name":"hopwork",
+        "url":"https://hopwork.com/profile/lionelbreduillieard",
+        "value":"lionel Breduillieard"
       }
     ],
     "projects":[{
       "title": "Magency Training Plateform",
-      "description": "Au cours de cette mission, j’ai accompagné l’équipe de developpement front-end mettre en place un envirenoment de tests automatisé afin d’améliorer la qualité du code de leur application et limiter la dette technique. Un autre aspect de cette mission à consister à mentorer l’équipe afin de se rapprocher de l’état de l’art dans le domaine du développement d’application web (architecture orienté composant, smart/dumb component, …) et d’améliorer l’architecture général de l’application (separation of concern,  module, …)",
+      "description": "Magency propose une solution pour animer des formations ou des réunions en favorisant la qualité et la richesses des interactions. Au cours de cette mission, j’ai accompagné l’équipe de developpement front-end à mettre en place un envirenoment de tests automatisé afin d’améliorer la qualité du code de leur application et limiter la dette technique. Un travail important de refactoring a aussi été méné en parallèlle sur l'architecture et les outils de développement afin de faciliter les prochaines évolutions fonctionnelles et techniques.",
       "slug": "magency",
       "year": 2016,
       "image": "static/img/magency/magency1.png",
@@ -38,13 +46,23 @@
       }
     }, {
       "title": "Ticket Designer",
-      "description": "La société TombolaDirecte a fait appel à mes services pour travailler sur un nouveau module riche afin de permettre aux utilisateur de faire le design de leur ticket de tombola, tout en laissant libre cours à leur créativité. Entièrement basé sur un rendu SVG, l'utilisateur peut à loisir ajouter des formes, des images ou des textes, ou plus simplement personnaliser un des nombreux  modèles existant.",
+      "description": "La société TombolaDirecte souhaitait proposer un module interactif de création de ticket de tombala pour leur utilisateur dans le cadre d'une refonte de leur parcours utilisateur. Cette mission présentait un challenge technique très intéressant: un éditeur WYSIWYG basé sur du SVG. L'utilisateur peut ainsi à loisir ajouter des formes, des images ou des textes, ou plus simplement personnaliser un des nombreux modèles existant.",
       "slug": "ticket-designer",
       "year": 2015,
-      "image": "static/img/tomboladirecte/designer.jpg",
+      "image": "static/img/tomboladirecte/designer.png",
       "client": {
         "logo": "static/img/tomboladirecte/tomboladirecte-logo.png",
         "name": "Tombola directe"
+      }
+    }, {
+      "title": "Ui-Designer",
+      "description": "UI-designer est un éditeur WISIWIG permet au utilisateur de concevoir des pages, des formulaires ainsi que des widgets qui pourront ensuite etre déployé dans la solution de BPM opensource que propose Bonitasoft. Disponible en plusieurs langues et décliné en 2 versions (community & subscription). Je suis venu renforcer l'équipe afin d'apporter mes compétences en javascript ainsi qu'en ",
+      "slug": "ui-designer",
+      "year": 2015,
+      "image": "static/img/bonitasoft/ui-designer-1.png",
+      "client": {
+        "logo": "static/img/bonitasoft/bonitasoft.png",
+        "name": "Bonitasoft"
       }
     }],
 
