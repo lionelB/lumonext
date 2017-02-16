@@ -6,8 +6,8 @@ import ContentWrapper from './ContentWrapper'
 
 const Title = (props) => {
   return (
-    <Section>
-      <TitleBorder top viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg">
+    <TitleContent>
+      <TitleBorder viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg">
         <path d="M1440 0v2L0 40V0h1440z" fill="#FFF" fillRule="evenodd" />
       </TitleBorder>
       <ContentWrapper>
@@ -19,30 +19,31 @@ const Title = (props) => {
       <TitleBorder bottom viewBox="0 0 1440 35" xmlns="http://www.w3.org/2000/svg">
         <path d="M1440 30v5H0V0l1440 30z" fill="#FFF" fillRule="evenodd" />
       </TitleBorder>
-    </Section>
+    </TitleContent>
   )
 }
 
 export default Title
 
-const Section = styled('div', {
-  marginTop:'4rem',
-  marginBottom:'4rem',
+const TitleContent = styled('div', {
+  margin:'4rem 0',
   letterSpacing: '.015em',
   position: 'relative',
   backgroundColor: colors.lightGray,
   overflow: 'hidden',
 })
 
-const TitleBorder = styled('svg', props => ({
-  top: props.top ? '-1px' : 'auto',
+const TitleBorder = styled('svg', (props) => ({
+  display: 'block',
+  position: 'relative',
+  top: props.bottom ? 'auto' : '-1px',
   bottom: props.bottom ? '-1px' : 'auto',
-  position: 'absolute'
 }))
 
 const SectionTitle = styled('h2', {
   position: 'relative',
-  lineHeight: 1.04
+  lineHeight: 1.04,
+  margin: '5.75rem 0'
 })
 
 const Dash = styled('div', props =>({

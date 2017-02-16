@@ -10,6 +10,8 @@ import TopBorder from '../components/TopBorder'
 import Bio from '../components/Bio'
 import Title from '../components/Title'
 import ProjectPreview from '../components/ProjectPreview'
+import Footer from '../components/Footer'
+
 import {cx} from '../utils'
 import colors from '../components/colors'
 
@@ -29,27 +31,39 @@ export default class Home extends React.Component {
   }
 
   render() {
-    const projects = this.props.projects.map((project, id) =>
-      <ProjectPreview key={id} project={project} light-theme></ProjectPreview>
-    )
+    const { email, mobile, socialLinks } = this.props.meta
+
+    const projects = this.props.projects.map((project, id) => {
+      switch(id%2) {
+        case 0:
+          return <ProjectPreview key={id} project={project} />
+        case 1:
+          return <ProjectPreview key={id} project={project} bgColor={ colors.lightGray } />
+        case 2:
+          return <ProjectPreview key={id} project={project} bgColor={ colors.gray } />
+      }
+    })
+
     return (
       <Layout title="Lumographe - développement web & mobile">
         <TopBorder />
         <Header />
         <Bio content={ this.props.meta.bio } />
-
-        <Title withBackground>
+        <Title>
           <SectionTitleSmall>Quelques</SectionTitleSmall>
           <SectionTitleBigStyled>Travaux récents</SectionTitleBigStyled>
         </Title>
-        { projects }
+        <Projects>
+          { projects }
+        </Projects>
+        <Footer email={ this.props.meta.email } socials={ socialLinks } mobile={ mobile } />
       </Layout>
     )
   }
 }
 
 const SectionTitleSmall = styled('div', {
-  fontSize: '1.6em',
+  fontSize: '1.4em',
   color:colors.gray,
 })
 const SectionTitleBig = ({className, children}) =>
@@ -57,5 +71,11 @@ const SectionTitleBig = ({className, children}) =>
 
 const SectionTitleBigStyled = styled(SectionTitleBig, {
   color: colors.black,
-  fontSize: '2.1em',
+  fontSize: '1.9em',
+})
+const Projects = styled('div', {
+  position: 'relative',
+  backgroundColor: '#fff',
+  marginBottom: '2em',
+  zIndex: 1,
 })

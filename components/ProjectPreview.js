@@ -5,12 +5,16 @@ import colors from './colors.js'
 import ContentWrapper from './ContentWrapper'
 import { cx } from '../utils'
 
-const ProjectPreview  = ({project, lightTheme}) => {
-  const isLight = lightTheme;
-
+const ProjectPreview  = ({project, lightTheme, bgColor}) => {
   return (
-    <section>
-      <ContentWrapper>
+    <Section bgColor={ bgColor }>
+      <ContentWrapper margin={0}>
+        <DecoTitleFont bgColor={ bgColor }>{ project.title }</DecoTitleFont>
+      </ContentWrapper>
+      <ProjectBorder viewBox="0 0 1440 20" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1440 0v2L0 20V0h1440z" fill="#FFF" fillRule="evenodd" />
+      </ProjectBorder>
+      <ContentWrapper margin={'3.5rem'}>
         <H2>{ project.title }</H2>
         <P> { project.description } </P>
         <Img src={'/' + project.image} />
@@ -19,9 +23,39 @@ const ProjectPreview  = ({project, lightTheme}) => {
           <ClientLogo src={'/' + project.client.logo } alt={ project.client.name } />
         </Client>
       </ContentWrapper>
-    </section>
+      <ProjectBorder bottom viewBox="0 0 1440 35" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1440 30v5H0V0l1440 30z" fill="#FFF" fillRule="evenodd" />
+      </ProjectBorder>
+    </Section>
   )
 }
+
+const Section = styled('section', (props) => ({
+  backgroundColor: props.bgColor || 'transparent',
+  position: 'relative'
+}))
+
+const DecoTitle = ({className, children}) =>
+  (<span className={cx(className, 'font-montserrat') }>{children}</span>)
+
+const DecoTitleFont = styled(DecoTitle, (props) => ({
+  userSelect: 'none',
+  pointerEvents: 'none',
+  color: props.bgColor || 'transparent',
+  position: 'absolute',
+  top: '-.65em',
+  fontSize: '4em',
+  transform: 'rotate(-1deg)',
+  zIndex: 1
+}))
+
+const ProjectBorder = styled('svg', (props) => ({
+  display: 'block',
+  position: 'relative',
+  top: props.bottom ? 'auto' : '-1px',
+  bottom: props.bottom ? '-1px' : 'auto',
+}))
+
 
 const H2font = ({className, children}) => (
   <h2 className={ cx(className, 'font-montserrat') }>{ children }</h2>

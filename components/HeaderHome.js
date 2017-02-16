@@ -82,7 +82,7 @@ const HeroSubtitle = ({className, children}) => <h2 className= {cx(className, 'f
 const HeroSubtitleStyled = styled(HeroSubtitle, {
     margin: '0',
     fontWeight: '400',
-    fontSize: '1.6em',
+    fontSize: '1.5em',
     letterSpacing: '.1em',
     lineHeight: '1',
     color: '#FFFFFF',
