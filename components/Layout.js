@@ -1,10 +1,10 @@
 import React from "react"
 import Head from 'next/head'
 import { StyletronProvider } from 'styletron-react'
-import getStyletron from '../styletron'
+import getStyletron from '../lib/styletron'
 
-import colors from './colors'
-import { observe} from './font-observer'
+import colors from '../lib/colors'
+import { observe } from '../lib/font-observer'
 
 
 // client code only

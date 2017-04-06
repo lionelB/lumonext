@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from 'styletron-react'
 
-import colors from '../colors'
+import colors from '../../lib/colors'
 
 const HopworkSvg = ({className}) => (
   <svg className={className} viewBox="0 0 128 36">

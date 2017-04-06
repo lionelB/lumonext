@@ -8,7 +8,7 @@ import Github from './IconGithub'
 import Linkedin from './IconLinkedin'
 import Hopwork from './IconHopwork'
 
-import colors from '../colors'
+import colors from '../../lib/colors'
 
 const socialLinks = props => (
   <List>

@@ -1,11 +1,11 @@
 import Document, { Head, Main, NextScript } from 'next/document'
-import { flush } from '../styletron'
-import {PORT, SERVER} from '../components/env'
+import { flush } from '../lib/styletron'
+import {PORT, SERVER} from '../lib/env'
 
 export default class MyDocument extends Document {
   static getInitialProps ({ renderPage }) {
     const page = renderPage()
-    const styletron = flush()
+    const styletron = flush() 
     const css = styletron ? styletron.getCss() : null
     return { ...page, css }
   }

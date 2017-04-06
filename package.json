@@ -11,17 +11,20 @@
   "author": "lionelb",
   "license": "ISC",
   "dependencies": {
-    "fontfaceobserver": "^2.0.7",
+    "fontfaceobserver": "^2.0.9",
     "isomorphic-fetch": "^2.2.1",
-    "next": "2.0.0-beta.22",
+    "next": "2.0.0-beta.39",
     "normalize-svg-path": "^0.1.0",
     "parse-svg-path": "^0.1.2",
     "path-match": "^1.2.4",
-    "styletron-client": "^2.2.0",
-    "styletron-react": "^2.2.1",
-    "styletron-server": "^2.2.0"
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "styletron-client": "^2.5.1",
+    "styletron-react": "^2.5.3",
+    "styletron-server": "^2.5.1",
+    "svgjelly": "^1.0.1"
   },
   "devDependencies": {
-    "prettier": "^0.0.5"
+    "prettier": "^0.22.0"
   }
 }

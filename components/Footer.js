@@ -4,8 +4,8 @@ import { styled } from 'styletron-react'
 import ContentWrapper from './ContentWrapper'
 import SocialLinks from './social-links'
 
-import colors from './colors'
-import { cx } from '../utils'
+import colors from '../lib/colors'
+import { cx } from '../lib/utils'
 
 const Footer = (props) => (
   <FooterSection>

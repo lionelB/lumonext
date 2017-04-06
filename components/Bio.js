@@ -1,7 +1,7 @@
 import React from "react"
 import {styled} from "styletron-react"
-import colors from './colors.js'
 
+import colors from '../lib/colors.js'
 import ContentWrapper from './ContentWrapper'
 
 export default (props) => {

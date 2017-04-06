@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from 'styletron-react'
 
-import colors from '../colors'
+import colors from '../../lib/colors'
 
 const LinkedinSvg = ({className}) => (
   <svg className={className} viewBox="0 0 24 24">

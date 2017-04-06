@@ -1,7 +1,7 @@
 import React from "react"
 import {styled} from 'styletron-react'
 
-import colors from './colors.js'
+import colors from '../lib/colors'
 import ContentWrapper from './ContentWrapper'
 
 const Title = (props) => {
@@ -31,6 +31,7 @@ const TitleContent = styled('div', {
   position: 'relative',
   backgroundColor: colors.lightGray,
   overflow: 'hidden',
+  lineHeight: 0
 })
 
 const TitleBorder = styled('svg', (props) => ({

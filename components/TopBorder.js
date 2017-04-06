@@ -1,5 +1,5 @@
 import { styled } from 'styletron-react'
-import colors from './colors'
+import colors from '../lib/colors'
 
 export default () => (
   <TopBorder />

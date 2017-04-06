@@ -1,21 +1,27 @@
 import React from "react"
 import {styled} from 'styletron-react'
-
-import colors from './colors.js'
+import Link from 'next/link'
+import colors from '../lib/colors'
 import ContentWrapper from './ContentWrapper'
-import { cx } from '../utils'
+import { cx } from '../lib/utils'
 
-const ProjectPreview  = ({project, lightTheme, bgColor}) => {
+const ProjectPreview  = ({project, first, bgColor}) => {
   return (
     <Section bgColor={ bgColor }>
-      <ContentWrapper margin={0}>
-        <DecoTitleFont bgColor={ bgColor }>{ project.title }</DecoTitleFont>
-      </ContentWrapper>
-      <ProjectBorder viewBox="0 0 1440 20" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1440 0v2L0 20V0h1440z" fill="#FFF" fillRule="evenodd" />
-      </ProjectBorder>
+      { 
+        bgColor && 
+        <ProjectBorder viewBox="0 0 1440 20" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1440 0v2L0 20V0h1440z" fill="#FFF" fillRule="evenodd" />
+        </ProjectBorder>
+      }
+      {
+        bgColor && 
+        <DecoWrapper>
+          <DecoTitleFont bgColor={ bgColor }>{ project.title }</DecoTitleFont>
+        </DecoWrapper>
+      }
       <ContentWrapper margin={'3.5rem'}>
-        <H2>{ project.title }</H2>
+        <H2>{ project.title }<Link href='/projects?id=test' as='/projects/test'><a>test</a></Link></H2>
         <P> { project.description } </P>
         <Img src={'/' + project.image} />
         <Client>
@@ -23,34 +29,45 @@ const ProjectPreview  = ({project, lightTheme, bgColor}) => {
           <ClientLogo src={'/' + project.client.logo } alt={ project.client.name } />
         </Client>
       </ContentWrapper>
-      <ProjectBorder bottom viewBox="0 0 1440 35" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1440 30v5H0V0l1440 30z" fill="#FFF" fillRule="evenodd" />
-      </ProjectBorder>
+      {
+        bgColor &&  <ProjectBorder bottom viewBox="0 0 1440 35" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1440 30v5H0V0l1440 30z" fill="#FFF" fillRule="evenodd" />
+        </ProjectBorder>
+      }
     </Section>
   )
 }
 
+
 const Section = styled('section', (props) => ({
   backgroundColor: props.bgColor || 'transparent',
-  position: 'relative'
+  lineHeight: 0
 }))
 
+const DecoWrapper = styled(ContentWrapper, {
+  margin: '0 auto',
+})
+ 
 const DecoTitle = ({className, children}) =>
-  (<span className={cx(className, 'font-montserrat') }>{children}</span>)
+  (<b className={cx(className, 'font-montserrat') }>{children}</b>)
 
 const DecoTitleFont = styled(DecoTitle, (props) => ({
   userSelect: 'none',
   pointerEvents: 'none',
-  color: props.bgColor || 'transparent',
-  position: 'absolute',
-  top: '-.65em',
-  fontSize: '4em',
+  color: props.bgColor, 
+  overflow: 'hidden',
+  fontSize: '4em',  
+  whiteSpace: 'nowrap', 
   transform: 'rotate(-1deg)',
-  zIndex: 1
+  marginTop: '-.9em',
+  display: 'inline-block',
+  fontWeight: 400, 
+  textOverflow: 'ellipsis',
 }))
 
 const ProjectBorder = styled('svg', (props) => ({
-  display: 'block',
+  display: 'block', 
+  
   position: 'relative',
   top: props.bottom ? 'auto' : '-1px',
   bottom: props.bottom ? '-1px' : 'auto',
@@ -92,5 +109,4 @@ const Img = styled('img', {
   width: "100%",
   boxShadow: '15px 15px 50px rgba(51, 51, 51, .5)',
 })
-
 export default ProjectPreview

@@ -2,17 +2,18 @@ import React from 'react'
 
 import Layout from '../components/Layout'
 import TopBorder from '../components/TopBorder'
+import Logo, { Path } from '../components/Logo'
 
 export default class Project extends React.Component {
   static getInitialProps ({ req, query }) {
     return {id: query.id}
   }
 
-  render() {
+  render() { 
     return (
       <Layout title="Lumographe - développement web & mobile">
         <TopBorder />
-        <h1> { this.props.id } </h1>
+        <h1> { this.props.id } </h1> 
       </Layout>
     )
   }

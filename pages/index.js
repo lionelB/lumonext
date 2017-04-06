@@ -3,8 +3,8 @@ import {styled} from "styletron-react";
 import Head from 'next/head'
 import Link from 'next/link'
 import fetch from 'isomorphic-fetch'
-import Layout from '../components/Layout'
 
+import Layout from '../components/Layout'
 import Header from '../components/HeaderHome'
 import TopBorder from '../components/TopBorder'
 import Bio from '../components/Bio'
@@ -12,10 +12,8 @@ import Title from '../components/Title'
 import ProjectPreview from '../components/ProjectPreview'
 import Footer from '../components/Footer'
 
-import {cx} from '../utils'
-import colors from '../components/colors'
-
-import Jelly from '../components/Jelly'
+import {cx} from '../lib/utils'
+import colors from '../lib/colors'
 
 const {
   PORT,
@@ -40,7 +38,7 @@ export default class Home extends React.Component {
         case 1:
           return <ProjectPreview key={id} project={project} bgColor={ colors.lightGray } />
         case 2:
-          return <ProjectPreview key={id} project={project} bgColor={ colors.gray } />
+          return <ProjectPreview key={id} project={project} />
       }
     })
 
