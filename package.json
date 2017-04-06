@@ -13,7 +13,7 @@
   "dependencies": {
     "fontfaceobserver": "^2.0.9",
     "isomorphic-fetch": "^2.2.1",
-    "next": "2.0.0-beta.39",
+    "next": "^2.0.1",
     "normalize-svg-path": "^0.1.0",
     "parse-svg-path": "^0.1.2",
     "path-match": "^1.2.4",
@@ -25,6 +25,14 @@
     "svgjelly": "^1.0.1"
   },
   "devDependencies": {
+    "babel-preset-flow": "^6.23.0",
+    "flow-bin": "^0.43.0",
     "prettier": "^0.22.0"
+  },
+  "babel": {
+    "presets": [
+      "next/babel",
+      "flow"
+    ]
   }
 }

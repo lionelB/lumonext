@@ -1,3 +1,4 @@
+// @flow
 import React from "react"
 import Head from 'next/head'
 import { StyletronProvider } from 'styletron-react'
@@ -12,13 +13,26 @@ if (typeof window !== 'undefined') {
   observe();
 }
 
-export default ({ children, title="Lumographe" }) => (
-  <StyletronProvider styletron={getStyletron()}>
-    <div className="styletron">
-      <Head>
-        <title>{ title }</title>
-      </Head>
-      { children }
-    </div>
-  </StyletronProvider>
-)
+
+class Layout extends React.Component {
+  props: {
+    title: string,
+    children: React.Element<*>,
+  }
+  
+  render() {
+    const { title, children } = this.props
+    return (
+      <StyletronProvider styletron={getStyletron()}>
+        <div className="styletron">
+          <Head>
+            <title>{title}</title>
+          </Head>
+          {children}
+        </div>
+      </StyletronProvider>
+    )
+  }
+}
+
+export default Layout

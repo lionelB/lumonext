@@ -1,26 +1,37 @@
+// @flow
 import React from "react"
 import {styled} from 'styletron-react'
 
 import colors from '../lib/colors'
 import ContentWrapper from './ContentWrapper'
 
-const Title = (props) => {
-  return (
-    <TitleContent>
-      <TitleBorder viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1440 0v2L0 40V0h1440z" fill="#FFF" fillRule="evenodd" />
-      </TitleBorder>
-      <ContentWrapper>
-        <SectionTitle>
-          { props.children }
-          <Dash />
-        </SectionTitle>
-      </ContentWrapper>
-      <TitleBorder bottom viewBox="0 0 1440 35" xmlns="http://www.w3.org/2000/svg">
-        <path d="M1440 30v5H0V0l1440 30z" fill="#FFF" fillRule="evenodd" />
-      </TitleBorder>
-    </TitleContent>
-  )
+type Props = {
+  children?: React.Element<*>
+}
+
+class Title extends React.Component {
+  props: {
+    children?: React.Element<*>
+  }
+  render() {
+    const { children } = this.props
+    return (
+      <TitleContent>
+        <TitleBorder viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1440 0v2L0 40V0h1440z" fill="#FFF" fillRule="evenodd" />
+        </TitleBorder>
+        <ContentWrapper>
+          <SectionTitle>
+            { children }
+            <Dash />
+          </SectionTitle>
+        </ContentWrapper>
+        <TitleBorder bottom viewBox="0 0 1440 35" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1440 30v5H0V0l1440 30z" fill="#FFF" fillRule="evenodd" />
+        </TitleBorder>
+      </TitleContent>
+    )
+  }
 }
 
 export default Title

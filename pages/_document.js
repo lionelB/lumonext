@@ -1,3 +1,4 @@
+// @flow
 import Document, { Head, Main, NextScript } from 'next/document'
 import { flush } from '../lib/styletron'
 import {PORT, SERVER} from '../lib/env'

@@ -1,8 +1,9 @@
+// @flow
 import React from 'react'
 
 import Layout from '../components/Layout'
 import TopBorder from '../components/TopBorder'
-import Logo, { Path } from '../components/Logo'
+import Logo from '../components/Logo'
 
 export default class Project extends React.Component {
   static getInitialProps ({ req, query }) {

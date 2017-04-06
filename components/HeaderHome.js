@@ -1,9 +1,10 @@
+// @flow
 import React from "react"
 import { styled } from 'styletron-react'
 
 import Logo from './Logo'
 import colors from '../lib/colors'
-import {cx} from '../lib/utils'
+import { cx } from '../lib/utils'
 
 export default () => (
   <Hero>

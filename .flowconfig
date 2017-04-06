@@ -1,0 +1,11 @@
+[ignore]
+\.next/.*
+\.vscode/.*
+md/
+static/
+
+[include]
+
+[libs]
+
+[options]

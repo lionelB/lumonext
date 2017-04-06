@@ -1,5 +1,7 @@
+// @flow
 import React from 'react'
 import { styled } from 'styletron-react'
+import type { SocialLink } from '../../lib/types'
 
 import Mail from './IconMail'
 import Mobile from './IconMobile'
@@ -7,20 +9,26 @@ import Twitter from './IconTwitter'
 import Github from './IconGithub'
 import Linkedin from './IconLinkedin'
 import Hopwork from './IconHopwork'
-
 import colors from '../../lib/colors'
 
-const socialLinks = props => (
-  <List>
-    <SmallItem><Mail /></SmallItem>
-    <SmallItem><Mobile /></SmallItem>
-    <SmallItem><Twitter /></SmallItem>
-    <SmallItem><Linkedin /></SmallItem>
-    <SmallItem><Github /></SmallItem>
-    <BigItem><Hopwork /></BigItem>
-  </List>
-)
 
+class SocialLinks extends React.Component {
+  props: {
+    links: SocialLink[]
+  }
+  render() {
+    return (
+      <List>
+        <SmallItem><Mail /></SmallItem>
+        <SmallItem><Mobile /></SmallItem>
+        <SmallItem><Twitter /></SmallItem>
+        <SmallItem><Linkedin /></SmallItem>
+        <SmallItem><Github /></SmallItem>
+        <BigItem><Hopwork /></BigItem>
+      </List>
+    )
+  }
+} 
 
 
 const List = styled('ul', {
@@ -43,4 +51,4 @@ const BigItem = styled('li',  {
   flexBasis: 4,
 })
 
-export default socialLinks
+export default SocialLinks
