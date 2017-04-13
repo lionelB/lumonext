@@ -8,10 +8,13 @@ import { cx } from '../lib/utils'
 import type { Project } from '../lib/types'
 
 class ProjectPreview extends React.Component { 
+  static defaultProps = {
+    first: false,
+  }
   props: {
     project: Project,
     first: boolean,
-    bgColor: string
+    bgColor?: string
   }
 
   render() {

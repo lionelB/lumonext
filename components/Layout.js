@@ -17,7 +17,7 @@ if (typeof window !== 'undefined') {
 class Layout extends React.Component {
   props: {
     title: string,
-    children: React.Element<*>,
+    children?: React.Element<*>,
   }
   
   render() {

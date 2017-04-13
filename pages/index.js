@@ -12,19 +12,12 @@ import Bio from '../components/Bio'
 import Title from '../components/Title'
 import ProjectPreview from '../components/ProjectPreview'
 import Footer from '../components/Footer'
-
-import {cx} from '../lib/utils'
+import {SERVER, PORT} from "../lib/env"
 import colors from '../lib/colors'
-
-const {
-  PORT,
-  SERVER
-} = 'undefined' !== typeof window ? window.env : process.env
-
 
 export default class Home extends React.Component {
   static async getInitialProps({req, res, props}) {
-    const data = await fetch(`http://${SERVER}:${PORT}/static/json/home.json`)
+    const data = await fetch(`http://${SERVER || 'localhost'}:${PORT || '3000' }/static/json/home.json`)
     const json = await data.json()
     return {projects: json.meta.projects, content: json.html, meta: json.meta};
   }
@@ -33,7 +26,7 @@ export default class Home extends React.Component {
     const { email, mobile, socialLinks } = this.props.meta
 
     const projects = this.props.projects.map((project, id) => {
-      switch(id%2) {
+      switch(id%2) {
         case 0:
           return <ProjectPreview key={id} project={project} />
         case 1:
@@ -46,32 +39,18 @@ export default class Home extends React.Component {
     return (
       <Layout title="Lumographe - développement web & mobile">
         <TopBorder />
-        <Header />
+        <Header /> 
         <Bio content={ this.props.meta.bio } />
-        <Title>
-          <SectionTitleSmall>Quelques</SectionTitleSmall>
-          <SectionTitleBigStyled>Travaux récents</SectionTitleBigStyled>
-        </Title>
-        <Projects>
+        <Title heading="Quelques Travaux récents" offsetTop={-10} offsetBottom={25} />
+        <Projects> 
           { projects }
         </Projects>
-        <Footer email={ this.props.meta.email } socials={ socialLinks } mobile={ mobile } />
+        <Footer email={ this.props.meta.email } socialNetworks={ socialLinks } mobile={ mobile } />
       </Layout>
     )
   }
 }
 
-const SectionTitleSmall = styled('div', {
-  fontSize: '1.4em',
-  color:colors.gray,
-})
-const SectionTitleBig = ({className, children}) =>
-  (<div className={cx(className, 'font-montserrat') }>{children}</div>)
-
-const SectionTitleBigStyled = styled(SectionTitleBig, {
-  color: colors.black,
-  fontSize: '1.9em',
-})
 const Projects = styled('div', {
   position: 'relative',
   backgroundColor: '#fff',

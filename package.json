@@ -4,6 +4,7 @@
   "description": "lumographe website",
   "main": "index.js",
   "scripts": {
+    "flow": "flow",
     "dev": "PORT=3000 SERVER=localhost  node server -p $PORT",
     "build": "next build",
     "start": "next start"

@@ -13,7 +13,7 @@ import colors from '../../lib/colors'
 
 
 class SocialLinks extends React.Component {
-  props: {
+  props: { 
     links: SocialLink[]
   }
   render() {

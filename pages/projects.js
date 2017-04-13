@@ -2,8 +2,7 @@
 import React from 'react'
 
 import Layout from '../components/Layout'
-import TopBorder from '../components/TopBorder'
-import Logo from '../components/Logo'
+import TopBorder from '../components/TopBorder' 
 
 export default class Project extends React.Component {
   static getInitialProps ({ req, query }) {
@@ -13,9 +12,9 @@ export default class Project extends React.Component {
   render() { 
     return (
       <Layout title="Lumographe - développement web & mobile">
-        <TopBorder />
+        <TopBorder /> 
         <h1> { this.props.id } </h1> 
-      </Layout>
+      </Layout> 
     )
   }
 }

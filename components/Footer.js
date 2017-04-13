@@ -11,7 +11,9 @@ import { cx } from '../lib/utils'
 
 class Footer extends React.Component {
   props: {
-    socialLinks: SocialLink[]
+    email: string,
+    mobile: string,
+    socialNetworks: SocialLink[]
   }
 
   render() {
@@ -23,7 +25,7 @@ class Footer extends React.Component {
         <ContentWrapper maxWidth={'35em'} margin={'3rem'}>
           <Hey>Vous souhaitez travailler avec moi ?</Hey>
           <H2>Contactez moi !</H2>
-          <SocialLinks links={this.props.socialLinks} />
+          <SocialLinks links={this.props.socialNetworks} />
           <Paragraph>
             Je réponds aux email, ou au téléphone,
       mais assez rarement aux proposition de CDI sur linkedin.
