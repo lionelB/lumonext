@@ -41,7 +41,7 @@ export default class Home extends React.Component {
         <TopBorder />
         <Header /> 
         <Bio content={ this.props.meta.bio } />
-        <Title heading="Quelques Travaux récents" once offsetTop={-10} offsetBottom={25} />
+        <Title heading="Quelques Travaux récents" once offsetTop={-10} offsetBottom={35} />
         <Projects> 
           { projects }
         </Projects>

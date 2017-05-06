@@ -49,7 +49,8 @@ const FooterSection = styled('footer', {
 
 const FooterText = styled('div', {
   flex: '1 0 auto',
-  margin: '0 2rem',
+  margin: '0 auto', 
+  maxWidth: '40em',
 })
 
 const Border = styled('svg', {
@@ -81,6 +82,7 @@ const Paragraph = styled('p', {
   color: colors.lightGray,
   fontStyle: 'italic',
   fontSize: '1.5em',
+  padding: '2rem',
 })
 
 

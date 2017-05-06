@@ -80,7 +80,7 @@ const OverflowText = styled('div', (props) => ({
 const SectionTitle = styled('h2', {
   position: 'relative',
   lineHeight: 1,
-  margin: '4rem 0 5rem',
+  margin: '5rem 0 5.5rem',
 })
 
 const SectionTitleSmall = styled('div', props => {

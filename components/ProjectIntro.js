@@ -1,7 +1,8 @@
 import React from 'react'
 import { styled } from 'styletron-react'
 import Animated from 'animated/lib/targets/react-dom'
-import Link from 'next/link'
+import Link from 'next/link' 
+import { A } from './ALink'
 import { BASE_WIDTH } from './ContentWrapper'
 import injectVisible from '../lib/scroll-reveal'
 import colors from '../lib/colors'
@@ -24,8 +25,8 @@ export class ProjectIntro extends React.Component {
   componentDidMount() {
     Animated.spring(this.state.opacity, { toValue: 0 }).start()
     this.interpolate = this.state.translate.interpolate({
-      inputRange: [-1, 0],
-      outputRange: ['20px', '0px']
+      inputRange: [0, 1],
+      outputRange: ['50px', '0px']
     });
   }
 
@@ -41,7 +42,7 @@ export class ProjectIntro extends React.Component {
       <Wrapper style={{
         opacity: this.state.opacity,
         transform: [{
-          translateY: this.interpolate 
+          translateX: this.interpolate 
         }]
       }}>
         <H2>
@@ -58,29 +59,19 @@ export class ProjectIntro extends React.Component {
 export default injectVisible(ProjectIntro);
 
 const Wrapper = styled(Animated.div, {
-  margin: '3.5rem auto 0',
+  lineHeight: 1.4,
+  margin: '5rem auto 0',
+  padding: '0 1rem',
   maxWidth: BASE_WIDTH,
   transformOrigin: 'left center',
 })
-
+ 
 const H2font = ({ className, children }) => (
   <h2 className={cx(className, 'font-montserrat')}>{children}</h2>
 )
 
 const H2 = styled(H2font, {
   fontSize: '2.25em',
-})
-
-const A = styled('a', {
-  color: colors.black,
-  textDecoration: 'none',
-  transition: '.1s ease color',
-  ':visited': {
-    color: colors.black,
-  },
-  ':hover': {
-    color: colors.blue,
-  }
 })
 
 const P = styled('p', {

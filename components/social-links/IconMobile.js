@@ -23,6 +23,7 @@ class MobileSvg extends React.Component {
 
 const Mobile = styled(MobileSvg, {
   display: 'block',
+  width: '100%',
   height: '100%'
 })
 

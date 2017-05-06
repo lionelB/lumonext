@@ -23,6 +23,7 @@ class LinkedInSvg extends React.Component {
 
 const Linkedin = styled(LinkedInSvg, {
   display: 'block',
+  width: '100%',
   height: '100%'
 })
 

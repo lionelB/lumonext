@@ -13,7 +13,7 @@ class HopworkSvg extends React.Component {
     const { className } = this.props
 
     return (
-      <svg className={className} viewBox="0 0 128 36">
+      <svg className={className} viewBox="0 0 128 30">
         <title>Hopwork</title>
         <g fill="currentColor">
           <path d="M55.86 2.53L57.9 3S56.37-.3 53.8.1c-.64.08-1.14.35-1.32.85-.15.4.2.6.9.6 0 .02 1.86-.2 2.48.98zM59.8 13.2c.04.24.45.38.95.08 0 0 .8-.82 1.9-.9 1.08-.07.72-1.02-.54-.93-2 .13-2.33 1.43-2.3 1.74z" />
@@ -27,6 +27,7 @@ class HopworkSvg extends React.Component {
 
 const Hopwork = styled(HopworkSvg, {
   display: 'block',
+  width: '100%',
   height: '100%'
 })
 

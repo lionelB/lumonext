@@ -23,6 +23,7 @@ class MailSvg extends React.Component {
 
 const Mail = styled(MailSvg, {
   display: 'block',
+  width: '100%',
   height: '100%'
 })
 

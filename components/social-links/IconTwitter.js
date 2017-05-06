@@ -23,6 +23,7 @@ class TwitterSvg extends React.Component {
 
 const Twitter = styled(TwitterSvg, {
   display: 'block',
+  width: '100%',
   height: '100%'
 })
 

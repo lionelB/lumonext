@@ -15,7 +15,7 @@
         "value":"lionel (at) lumographe.fr "
       }, {
         "name":"mobile",
-        "url":"https://fr.linkedin.com/in/lionelbreduillieard",
+        "url":"tel:+33683743774",
         "value":"Lionel Breduillieard"
       },{
         "name":"twitter",
@@ -73,34 +73,6 @@
           "logo": "static/img/bonitasoft/bonitasoft.png",
           "name": "Bonitasoft"
         }
-      }
-    ],
-
-    "skills":[ {
-        "label":"Techniques",
-        "values":[
-          "HTML, CSS, Javascript",
-          "vanilla, AngularJs, reactJs, jQuery",
-          "BEM, Stylus, Less, Sass, Compass",
-          "npm scripts, Gulp, Grunt, Brunch",
-          "Git, github collaboration"
-        ]
-      },
-      {
-        "label":"Générales",
-        "values":[
-          "Ergonomie, expérience utilisateur",
-          "Design, interface",
-          "Bonnes pratiques, accessibilité",
-          "Performance"
-        ]
-      },
-      {
-        "label":"En cours",
-        "values":[
-          "ReactJs",
-          "Isomorphic App"
-        ]
       }
     ]
   },

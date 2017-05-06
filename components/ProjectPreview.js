@@ -1,7 +1,7 @@
 // @flow
 import React from "react"
 import { styled } from 'styletron-react' 
-import ContentWrapper from './ContentWrapper'
+import { BASE_WIDTH } from './ContentWrapper'
 import colors from '../lib/colors'
 import { cx } from '../lib/utils'
 import injectVisible from '../lib/scroll-reveal'
@@ -37,15 +37,16 @@ class ProjectPreview extends React.Component {
           </DecoWrapper>
         }
         
-        <ProjectIntro title={project.title} description={project.description}  offsetBottom={25}/>
-        <ContentWrapper maxWidth="80rem" margin="0">
-          <ImageReveal url={project.image} offsetBottom={25} />
+        <ProjectIntro title={project.title} description={project.description}  offsetBottom={60}/>
+        <Wrapper>
+          <ImageReveal url={project.image} offsetBottom={50} />
           <Client>
             <span>Client: </span>
             <ClientLogo src={'/' + project.client.logo} alt={project.client.name} />
           </Client>
-        </ContentWrapper> 
-        {
+        </Wrapper> 
+
+        { 
           bgColor && <ProjectBorder bottom viewBox="0 0 1440 35" xmlns="http://www.w3.org/2000/svg">
             <path d="M1440 30v5H0V0l1440 30z" fill="#FFF" fillRule="evenodd" />
           </ProjectBorder>
@@ -61,8 +62,10 @@ const Section = styled('section', (props) => ({
   marginTop: props.margin || 0,
 }))
 
-const DecoWrapper = styled(ContentWrapper, {
-  margin: '0 auto',
+const DecoWrapper = styled('div', {
+  margin: '0 auto', 
+  maxWidth: BASE_WIDTH,
+  position: 'relative',
 })
 
 const DecoTitle = ({ className, children }) =>
@@ -71,25 +74,30 @@ const DecoTitle = ({ className, children }) =>
 const DecoTitleFont = styled(DecoTitle, (props) => ({
   userSelect: 'none',
   pointerEvents: 'none',
-  color: props.bgColor,
-  overflow: 'hidden',
+  color: props.bgColor, 
   fontSize: '4em',
   whiteSpace: 'nowrap',
   transform: 'rotate(-1deg)',
-  marginTop: '-.9em',
+  position: 'absolute',
+  top: '-.3em',
   display: 'inline-block',
   fontWeight: 400,
   textOverflow: 'ellipsis',
 }))
 
 const ProjectBorder = styled('svg', (props) => ({
-  display: 'block',
-
+  display: 'block', 
   position: 'relative',
   top: props.bottom ? 'auto' : '-1px',
   bottom: props.bottom ? '-1px' : 'auto',
 }))
- 
+
+const Wrapper = styled('div', {
+  margin: '0 auto',
+  maxWidth: '80rem',
+  lineHeight: 1.4,
+  overflow: 'hidden',
+})
 const Client = styled('div', {
   color: colors.gray,
   display: 'flex',
