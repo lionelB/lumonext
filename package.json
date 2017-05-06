@@ -11,19 +11,24 @@
   },
   "author": "lionelb",
   "license": "ISC",
+  "browser": {
+    "animated": "animated/lib/targets/react-dom"
+  },
   "dependencies": {
+    "abs-svg-path": "^0.1.1",
+    "animated": "^0.2.0",
     "fontfaceobserver": "^2.0.9",
     "isomorphic-fetch": "^2.2.1",
-    "next": "^2.0.1",
+    "next": "^2.3.1",
     "normalize-svg-path": "^0.1.0",
     "parse-svg-path": "^0.1.2",
     "path-match": "^1.2.4",
+    "prop-types": "^15.5.8",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
     "styletron-client": "^2.5.1",
     "styletron-react": "^2.5.3",
-    "styletron-server": "^2.5.1",
-    "svgjelly": "^1.0.1"
+    "styletron-server": "^2.5.1"
   },
   "devDependencies": {
     "babel-preset-flow": "^6.23.0",

@@ -20,7 +20,7 @@ class Title extends React.Component<*, Props,*> {
     const { heading, visible } = this.props  
     const [main, ...sub] = heading.split(' ') 
     return (<div>
-      <TitleContent>
+      <TitleContent visible={visible}>
         <TitleBorder viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg">
           <path d="M1440 0v2L0 40V0h1440z" fill="#FFF" fillRule="evenodd" />
         </TitleBorder>
@@ -42,14 +42,25 @@ class Title extends React.Component<*, Props,*> {
 }
  
 export default injectVisible(Title)
-
-const TitleContent = styled('div', {
-  margin:'4rem 0',
-  letterSpacing: '.015em',
-  position: 'relative',
-  backgroundColor: colors.lightGray,
-  overflow: 'hidden',
-  lineHeight: 0
+const ease = 'cubic-bezier(.18, .84, .36, 1)'
+const TitleContent = styled('div', props => {
+  const animation = {
+    transform: 'none',
+    transition:`.3s ${ease} transform`,
+    transformOrigin: 'center',
+    opacity: 1,
+  }
+  return {
+    margin:'4rem 0',
+    letterSpacing: '.015em',
+    position: 'relative',
+    backgroundColor: colors.lightGray,
+    overflow: 'hidden',
+    lineHeight: 0,
+    opacity:0,
+    transform: 'scaleY(.1)',
+    ...props.visible ? animation : {}
+  }
 })
 
 const TitleBorder = styled('svg', props => ({
@@ -69,13 +80,13 @@ const OverflowText = styled('div', (props) => ({
 const SectionTitle = styled('h2', {
   position: 'relative',
   lineHeight: 1,
-  margin: '5.75rem 0',
+  margin: '4rem 0 5rem',
 })
 
 const SectionTitleSmall = styled('div', props => {
   const animation = {
     transform: 'none',
-    transition: '.5s .5s cubic-bezier(.57,.09,.51,.95) transform, .5s .5s cubic-bezier(.57,.09,.51,.95) opacity',
+    transition:`.5s .3s ${ease} transform, .5s .3s ${ease} opacity`,
     transformOrigin: 'left bottom',
     opacity: 1,
   }
@@ -95,7 +106,7 @@ const SectionTitleBigStyled = styled(SectionTitleBig, (props) => {
   const animation = {
     transform: 'none',
     opacity: 1,
-    transition: '.5s .3s cubic-bezier(.57,.09,.51,.95) transform, .5s .3s cubic-bezier(.57,.09,.51,.95)',
+    transition:`.5s .5s ${ease} transform, .5s .5s ${ease}`,
     transformOrigin: 'left center',
   }
 
@@ -110,7 +121,7 @@ const SectionTitleBigStyled = styled(SectionTitleBig, (props) => {
 
 const Dash = styled('div', props => {
   const visible = {
-    transition: '.3s .6s cubic-bezier(.57,.09,.51,.95) transform',
+    transition: `.3s .9s ${ease} transform`,
     transform: 'none',
     transformOrigin: 'left center' 
   }

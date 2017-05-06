@@ -22,7 +22,7 @@ class Footer extends React.Component {
         <Border viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg">
           <path d="M1440 0v2L0 40V0h1440z" fill="#FFF" fillRule="evenodd" />
         </Border>
-        <ContentWrapper maxWidth={'35em'} margin={'3rem'}>
+        <FooterText>
           <Hey>Vous souhaitez travailler avec moi ?</Hey>
           <H2>Contactez moi !</H2>
           <SocialLinks links={this.props.socialNetworks} />
@@ -33,16 +33,23 @@ class Footer extends React.Component {
       ou alors consulter ma page freelance sur le reseau hopwork.
       Je me ferais un plaisir de vous répondre rapidement.
             </Paragraph>
-        </ContentWrapper>
+        </FooterText>
       </FooterSection>
     )
   }
 }
 
 const FooterSection = styled('footer', {
-  overflow: 'hidden',
+  // overflow: 'hidden',
   width: '100%',
   backgroundColor: colors.darkblue,
+  display: 'flex',
+  flexDirection: 'column',
+})
+
+const FooterText = styled('div', {
+  flex: '1 0 auto',
+  margin: '0 2rem',
 })
 
 const Border = styled('svg', {

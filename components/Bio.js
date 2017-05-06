@@ -16,7 +16,7 @@ class Bio extends React.Component {
       <p key={`p${index}`} dangerouslySetInnerHTML={{__html: content}}></p>
     ))
 
-    return (
+    return ( 
       <BioWrapper maxWidth={ '35rem' } margin={ '5em' }> { paragraphes } </BioWrapper>
     )
   }
@@ -29,6 +29,6 @@ const BioWrapper = styled(ContentWrapper, {
   padding: '1em 0',
   padding: 0,
   lineHeight: 1.5,
-  fontSize: '1.2em',
+  fontSize: '1.3em',
   color: colors.black,
 })

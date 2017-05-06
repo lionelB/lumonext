@@ -23,8 +23,7 @@ class GithubSvg extends React.Component {
 
 const Github = styled(GithubSvg, {
   display: 'block',
-  height: '100%',
-  width: 'auto',
+  width: '100%'
 })
 
 export default Github

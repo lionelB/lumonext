@@ -16,7 +16,7 @@ export default class MyDocument extends Document {
       <html>
         <Head>
           <title>Lumographe</title>
-          <meta charset="utf-8"/>
+          <meta charSet="utf-8"/>
           <style dangerouslySetInnerHTML={{__html: `
             @font-face {
               font-family: 'montserrat';

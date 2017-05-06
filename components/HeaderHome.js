@@ -35,9 +35,9 @@ const Hero = styled('header', {
   padding: '2em',
   position: 'relative',
   textAlign: 'center',
-  '@media (max-width: 40em)': {
-    padding: '0',  
-  } 
+  // '@media (max-width: 40em)': {
+  //   padding: '0',  
+  // } 
 })
 
 const HeroWrapper = styled('div', {
@@ -52,11 +52,11 @@ const HeroArtwork = styled('div', {
   backgroundSize: 'contain',
   display: 'inline-block',
   position: 'relative',
-  '@media (max-width: 40em)': {  
-    backgroundSize: 'cover', 
-    backgroundPosition: 'center center',
-    paddingTop: '75%',
-  } 
+  // '@media (max-width: 40em)': {  
+  //   backgroundSize: 'cover', 
+  //   backgroundPosition: 'center center',
+  //   paddingTop: '75%',
+  // } 
 })
 
 const HeroLogo = styled(Logo, {
@@ -65,10 +65,10 @@ const HeroLogo = styled(Logo, {
   left: '50%',
   width: '20.75%',
   transform: 'translate(-45%, -22%)',
-  '@media (max-width: 40em)': {  
-    width: '35%', 
-    transform: 'translate(-45%, -30%)',
-  } 
+  // '@media (max-width: 40em)': {  
+  //   width: '35%', 
+  //   transform: 'translate(-45%, -30%)',
+  // } 
 })
 
 const HeroIdentity = styled('hgroup', {
@@ -85,9 +85,9 @@ const HeroTitleStyled = styled(HeroTitle, {
     lineHeight: 1,
     textTransform: 'uppercase',
     textShadow: '0px 2px 4px rgba(19,38,102,0.50)',
-    '@media (max-width: 40em)': { 
-      fontSize: '2em',
-    } 
+    // '@media (max-width: 40em)': { 
+    //   fontSize: '2em',
+    // } 
 })
 
 const HeroSubtitle = ({className, children}) => <h2 className= {cx(className, 'font-ebgaramond')}>{children}</h2>
@@ -99,9 +99,9 @@ const HeroSubtitleStyled = styled(HeroSubtitle, {
     lineHeight: '1',
     color: '#FFFFFF',
     textShadow: '0px 0px 3px #7DEDFF',
-    '@media (max-width: 40em)': { 
-      fontSize: '1em',
-    }
+    // '@media (max-width: 40em)': { 
+    //   fontSize: '1em',
+    // }
 })
 
 const HeroAvatar = styled('div', {
@@ -113,13 +113,13 @@ const HeroAvatar = styled('div', {
   backgroundColor: `${colors.gray}`,
   position: 'relative',
   zIndex: '2', 
-  '@media (max-width: 40em)': { 
-    marginBottom: 0,
-    bottom: '-2em', 
-    width: '10vh',
-    height: '10vh', 
-    padding: `.2em`,
-  }
+  // '@media (max-width: 40em)': { 
+  //   marginBottom: 0,
+  //   bottom: '-2em', 
+  //   width: '10vh',
+  //   height: '10vh', 
+  //   padding: `.2em`,
+  // }
 })
 const Avatar = styled('img', {  
   width: '100%',

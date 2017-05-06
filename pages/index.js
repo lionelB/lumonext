@@ -41,7 +41,7 @@ export default class Home extends React.Component {
         <TopBorder />
         <Header /> 
         <Bio content={ this.props.meta.bio } />
-        <Title heading="Quelques Travaux récents" offsetTop={-10} offsetBottom={25} />
+        <Title heading="Quelques Travaux récents" once offsetTop={-10} offsetBottom={25} />
         <Projects> 
           { projects }
         </Projects>
@@ -52,8 +52,6 @@ export default class Home extends React.Component {
 }
 
 const Projects = styled('div', {
-  position: 'relative',
-  backgroundColor: '#fff',
-  marginBottom: '2em',
-  zIndex: 1,
+  position: 'relative', 
+  marginBottom: '2em', 
 })

@@ -37,18 +37,17 @@ const List = styled('ul', {
   flexDirection: 'row',
   alignItems: 'stretch',
   justifyContent: 'space-around',
-  height: '2em',
+  height: '3em',
   paddingLeft: 0,
   color: colors.green,
 })
 
-const SmallItem = styled('li',  {
-  flexBasis: 1,
-  padding: '6px 0'
+const SmallItem = styled('li', {
+  flex: '0 0 auto',
 })
 
-const BigItem = styled('li',  {
-  flexBasis: 4,
+const BigItem = styled('li', {
+  flex:'0 0 auto',
 })
 
 export default SocialLinks
