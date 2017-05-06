@@ -7,12 +7,12 @@ import ContentWrapper from './ContentWrapper'
 
 class Bio extends React.Component {
   props: {
-    content: string,
-  }
+    content: string[],
+  } 
   
   render() {
     const {content} = this.props
-    const paragraphes = content.split(/\n/g).map((content, index) => (
+    const paragraphes = content.map((content, index) => (
       <p key={`p${index}`} dangerouslySetInnerHTML={{__html: content}}></p>
     ))
 

@@ -1,6 +1,10 @@
 {
   "meta":{
-    "bio":"Je m’appelle Lionel Breduillieard et je suis <strong>développeur front-end</strong> indépendant.\nJe réalise des applications web, mobile ou les deux, en portant une attention particulière au design et à l’ergonomie.\nInstallé au sud de Valence (Drôme - France), j’interviens en télétravail partout en France (et pourquoi pas dans le monde).",
+    "bio":[
+      "Je m’appelle Lionel Breduillieard et je suis <strong>développeur front-end</strong> indépendant.",
+      "Je réalise des applications web, mobile ou les deux, en portant une attention particulière au design et à l’ergonomie.",
+      "Installé au sud de Valence (Drôme - France), j’interviens en télétravail partout en France (et pourquoi pas dans le monde)."
+    ],
     "title":"L'atelier du Lumographe",
     "avatar":"medias/lionel.jpg",
     "bubbles":[

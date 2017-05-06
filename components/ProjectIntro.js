@@ -12,6 +12,7 @@ type Props = {
   visible: boolean,
   title: string,
   description: string,
+  slug: string,
 }
 
 export class ProjectIntro extends React.Component {
@@ -46,8 +47,8 @@ export class ProjectIntro extends React.Component {
         }]
       }}>
         <H2>
-          <Link href="/projects?id=test" as="/projects/test">
-            <A href="/projects/test">{this.props.title}</A>
+          <Link href={`projects?id=${this.props.slug}`} as={`/projects/${this.props.slug}`}>
+            <A href={`/projects/${this.props.slug}`}>{this.props.title}</A>
           </Link>
         </H2>
         { this.props.description.map((paragraph, index) => <P key={index}> { paragraph } </P>) }

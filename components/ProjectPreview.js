@@ -37,9 +37,9 @@ class ProjectPreview extends React.Component {
           </DecoWrapper>
         }
         
-        <ProjectIntro title={project.title} description={project.description}  offsetBottom={60}/>
+        <ProjectIntro title={project.title} slug={project.slug} description={project.description}  offsetBottom={60}/>
         <Wrapper>
-          <ImageReveal url={project.image} offsetBottom={50} />
+          <ImageReveal url={project.image} offsetBottom={55} />
           <Client>
             <span>Client: </span>
             <ClientLogo src={'/' + project.client.logo} alt={project.client.name} />

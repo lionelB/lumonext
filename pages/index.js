@@ -14,8 +14,17 @@ import ProjectPreview from '../components/ProjectPreview'
 import Footer from '../components/Footer'
 import {SERVER, PORT} from "../lib/env"
 import colors from '../lib/colors'
+import type { Project, Meta } from '../lib/types'
+
+type Props = {
+  meta: Meta,
+  projects: Project[],
+}
 
 export default class Home extends React.Component {
+
+  props: Props 
+
   static async getInitialProps({req, res, props}) {
     const data = await fetch(`http://${SERVER || 'localhost'}:${PORT || '3000' }/static/json/home.json`)
     const json = await data.json()
